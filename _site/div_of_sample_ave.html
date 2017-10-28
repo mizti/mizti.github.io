@@ -6,26 +6,41 @@
     <!--<link rel="stylesheet" href="css/common.css">-->
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="js/top.js"></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      },
+      CommonHTML: { matchFontHeight: false },
+      displayAlign: "left",
+      displayIndent: "2em"
+    });
+    </script>
     <script type="text/javascript" async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
   </head>
 
   <body>
-    <h1 id="標本平均の分散について">標本平均の分散について</h1>
-<p>メモ。</p>
+    <p>※ github pagesへの試験投稿</p>
 
-<p>ある(特に正規分布であるとか限定はせず)確率分布 $D$ の
-標本平均 $\bar{X}$ 、つまり独立なサンプル $X_i = X_1, X_2, … X_n$ の平均</p>
+<p>ある(特に正規分布であるとか限定はせず)確率分布$D$ の
+標本平均$\bar{X}$、つまり独立なサンプル$X_i = X_1, X_2, … X_n$の平均</p>
 
-<p><script type="math/tex">\bar{X} = \dfrac{1}{n}\sum_i^n X_i</script>
-について、その標本平均自体の分散 $V[\bar{X}]$ は、下記のように求められる。
-<script type="math/tex">% <![CDATA[
+<script type="math/tex; mode=display">\bar{X} = \dfrac{1}{n}\sum_i^n X_i</script>
+
+<p>について、その標本平均自体の分散$V[\bar{X}]$は、下記のように求められる。</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
 \begin{eqnarray*}
 V[\bar{X}] &=& V\Big[\dfrac{X_1 + X_2 + ... + X_n}{n}\Big]\\
 &=&\Big(\dfrac{1}{n}\Big)^2\Big(V[X_1] + VaV_2] + ... + V[V]\Big)\\
 &=&\dfrac{n\sigma^2}{n^2}\\
 &=&\dfrac{\sigma^2}{n}\\
 \end{eqnarray*} %]]></script>
-ここで、1式から2式への変換には</p>
+
+<p>ここで、1式から2式への変換には</p>
 <ol>
   <li>$V(aX + b) = a^2 V(X)$
 と</li>
@@ -35,7 +50,7 @@ V[\bar{X}] &=& V\Big[\dfrac{X_1 + X_2 + ... + X_n}{n}\Big]\\
 <p>という性質を用いている。</p>
 
 <hr />
-<p>$V[\bar{X}] = \dfrac{\sigma^2}{n}$ は、サンプル数nが大きくなるほど $\bar{X}$ の分散が小さくなり、確率分布 $D$ の真の平均 $\mu$ に収束していくことを示している。</p>
+<p>$V[\bar{X}] = \dfrac{\sigma^2}{n}$は、サンプル数nが大きくなるほど$\bar{X}$の分散が小さくなり、確率分布$D$の真の平均$\mu$に収束していくことを示している。</p>
 
   </body>
 </html>
