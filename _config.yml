@@ -1,4 +1,5 @@
-theme: jekyll-theme-tactile
+#theme: jekyll-theme-tactile
+theme: jekyll-theme-cayman
 auto: true
 server: true
 markdown: kramdown
