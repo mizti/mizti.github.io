@@ -2,6 +2,7 @@
 layout: default
 title: 標本平均の分散について
 ---
+# 標本平均の分散について
 
 ※ github pagesへの試験投稿
 
