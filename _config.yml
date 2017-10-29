@@ -3,4 +3,4 @@ theme: jekyll-theme-cayman
 auto: true
 server: true
 markdown: kramdown
-exclude: [vendor]
+exclude: [vendor, "*.sh", "CNAME", "Gemfile*"]
