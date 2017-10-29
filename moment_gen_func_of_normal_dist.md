@@ -9,14 +9,13 @@ title: 標本平均の分散について
 
 $$M_x(t) = E[e^{tX}]$$
 
-と表される（これが定義）
-これをまず
+と表される（これが定義）。これをまず  
 
 $$
 E[X] = \int xp(x) dx
 $$
 
-用いて展開する（確率分布を用いた期待値の表現）。
+用いて展開する（確率分布を用いた期待値の表現）。  
 
 $$
 \begin{eqnarray*}
@@ -24,7 +23,7 @@ $$
 \end{eqnarray*}
 $$
 
-$e^{tx}$を$ e^{-\frac{(x-\mu)^2}{2\sigma^2}}$ と合わせる
+$e^{tx}$を$ e^{-\frac{(x-\mu)^2}{2\sigma^2}}$ と合わせる  
 
 $$
 \begin{eqnarray*}
@@ -32,7 +31,7 @@ $$
 \end{eqnarray*}
 $$
 
-ここで、指数部に着目する。
+ここで、指数部に着目する。  
 
 $$
 \begin{eqnarray*}
@@ -41,7 +40,7 @@ tx {-\frac{(x-\mu)^2}{2\sigma^2}} &=& \frac{ -x^2 + 2\mu x - \mu ^2 + 2t\sigma^2
 \end{eqnarray*}
 $$
 
-ここで、$\mu + t\sigma ^2$ を仮に$h$と置くと、
+ここで、$\mu + t\sigma ^2$ を仮に$h$と置くと、  
 
 $$
 \begin{eqnarray*}
@@ -56,8 +55,7 @@ $$
 \end{eqnarray*}
 $$
 
-と指数部を変形することができた。
-よって、最初の式に戻ると
+と指数部を変形することができた。よって、最初の式に戻ると  
 
 $$
 \begin{eqnarray*}
@@ -66,10 +64,10 @@ E[e^tX] &=& \int_{-\infty}^{\infty} \frac{1} {\sqrt{2\pi}\sigma}e^{ -\frac{ (x-h
 \end{eqnarray*}
 $$
 
-ここで、積分の中を見ると平均$h = \mu + t\sigma ^2$、分散$\sigma^2$な正規分布$\mathcal{N}(h, \sigma^2)$となっていることが分かる。
+ここで、積分の中を見ると平均$h = \mu + t\sigma ^2$、分散$\sigma^2$な正規分布$\mathcal{N}(h, \sigma^2)$となっていることが分かる。  
 
 正規分布は確率分布であり、全範囲で積分すれば$1$である
-（∵全事象の起きる確率は1である）ため、結局、正規分布においては
+（∵全事象の起きる確率は1である）ため、結局、正規分布においては  
 
 $$
 \begin{eqnarray*}
