@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset='utf-8'>
-    <title>標本平均の分散について-@mizti's memo</title>
+    <title>正規分布のモーメント母関数の導出-@mizti's memo</title>
     <!--<link rel="stylesheet" href="css/common.css">-->
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="js/top.js"></script>
@@ -73,7 +73,7 @@ tx {-\frac{(x-\mu)^2}{2\sigma^2}} &=& \frac{ -x^2 + 2\mu x - \mu ^2 + 2t\sigma^2
 
 <script type="math/tex; mode=display">% <![CDATA[
 \begin{eqnarray*}
-E[e^tX] &=& \int_{-\infty}^{\infty} \frac{1} {\sqrt{2\pi}\sigma}e^{ -\frac{ (x-h)^2 } {2\sigma^2} + \mu t + \frac{t^2 \sigma^2}{2}  }dx \\
+E[e^{tX}] &=& \int_{-\infty}^{\infty} \frac{1} {\sqrt{2\pi}\sigma}e^{ -\frac{ (x-h)^2 } {2\sigma^2} + \mu t + \frac{t^2 \sigma^2}{2}  }dx \\
  &=& e^{ \mu t + \frac{t^2 \sigma^2}{2}  } \int_{-\infty}^{\infty} \frac{1} {\sqrt{2\pi}\sigma}e^{ -\frac{ (x-h)^2 } {2\sigma^2}   }dx
 \end{eqnarray*} %]]></script>
 
@@ -84,7 +84,7 @@ E[e^tX] &=& \int_{-\infty}^{\infty} \frac{1} {\sqrt{2\pi}\sigma}e^{ -\frac{ (x-h
 
 <script type="math/tex; mode=display">% <![CDATA[
 \begin{eqnarray*}
-Mt(x) = E[e^tX] &=& e^{ \mu t + \frac{t^2 \sigma^2}{2}  } 
+Mt(x) = E[e^{tX}] &=& e^{ \mu t + \frac{t^2 \sigma^2}{2}  } 
 \end{eqnarray*} %]]></script>
 
 <p>が成立することが分かる。</p>

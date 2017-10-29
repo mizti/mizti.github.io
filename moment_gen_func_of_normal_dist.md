@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 標本平均の分散について
+title: 正規分布のモーメント母関数の導出
 ---
 
 # 正規分布のモーメント母関数の導出
@@ -59,7 +59,7 @@ $$
 
 $$
 \begin{eqnarray*}
-E[e^tX] &=& \int_{-\infty}^{\infty} \frac{1} {\sqrt{2\pi}\sigma}e^{ -\frac{ (x-h)^2 } {2\sigma^2} + \mu t + \frac{t^2 \sigma^2}{2}  }dx \\
+E[e^{tX}] &=& \int_{-\infty}^{\infty} \frac{1} {\sqrt{2\pi}\sigma}e^{ -\frac{ (x-h)^2 } {2\sigma^2} + \mu t + \frac{t^2 \sigma^2}{2}  }dx \\
  &=& e^{ \mu t + \frac{t^2 \sigma^2}{2}  } \int_{-\infty}^{\infty} \frac{1} {\sqrt{2\pi}\sigma}e^{ -\frac{ (x-h)^2 } {2\sigma^2}   }dx
 \end{eqnarray*}
 $$
@@ -71,7 +71,7 @@ $$
 
 $$
 \begin{eqnarray*}
-Mt(x) = E[e^tX] &=& e^{ \mu t + \frac{t^2 \sigma^2}{2}  } 
+Mt(x) = E[e^{tX}] &=& e^{ \mu t + \frac{t^2 \sigma^2}{2}  } 
 \end{eqnarray*}
 $$
 
