@@ -25,31 +25,40 @@
   <body>
     <h1 id="正規分布のモーメント母関数の導出">正規分布のモーメント母関数の導出</h1>
 
-<p>モーメント母関数の一般形は
-<script type="math/tex">M_x(t) = E[e^{tX}]</script>
-と表される（これが定義）
-これをまず
-<script type="math/tex">E[X] = \int xp(x) dx</script>
-用いて展開する（確率分布を用いた期待値の表現）。</p>
+<p>モーメント母関数の一般形は</p>
 
-<p><script type="math/tex">% <![CDATA[
+<script type="math/tex; mode=display">M_x(t) = E[e^{tX}]</script>
+
+<p>と表される（これが定義）
+これをまず</p>
+
+<script type="math/tex; mode=display">E[X] = \int xp(x) dx</script>
+
+<p>用いて展開する（確率分布を用いた期待値の表現）。</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
 \begin{eqnarray*}
 &=& \int_{-\infty}^{\infty} e^{tx} \frac{1} {\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}dx
 \end{eqnarray*} %]]></script>
-$e^{tx}$を$ e^{-\frac{(x-\mu)^2}{2\sigma^2}}$ と合わせる
-<script type="math/tex">% <![CDATA[
+
+<p>$e^{tx}$を$ e^{-\frac{(x-\mu)^2}{2\sigma^2}}$ と合わせる</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
 \begin{eqnarray*}
 &=& \int_{-\infty}^{\infty} e^{tx} \frac{1} {\sqrt{2\pi}\sigma}e^{tx {-\frac{(x-\mu)^2}{2\sigma^2}}}dx
 \end{eqnarray*} %]]></script>
-ここで、指数部に着目する。</p>
 
-<p><script type="math/tex">% <![CDATA[
+<p>ここで、指数部に着目する。</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
 \begin{eqnarray*}
 tx {-\frac{(x-\mu)^2}{2\sigma^2}} &=& \frac{ -x^2 + 2\mu x - \mu ^2 + 2t\sigma^2 x }{2\sigma^2} (展開して通分)\\
 &=& \frac{ -x^2 + 2(\mu +t\sigma^2)x - \mu ^2 }{2\sigma^2} (xの2次方程式に)\\
 \end{eqnarray*} %]]></script>
-ここで、$\mu + t\sigma ^2$ を仮に$h$と置くと、
-<script type="math/tex">% <![CDATA[
+
+<p>ここで、$\mu + t\sigma ^2$ を仮に$h$と置くと、</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
 \begin{eqnarray*}
 &=& \frac{ -x^2 + 2hx - \mu ^2 }{2\sigma^2} (hを置き換えた)\\
 &=& \frac{ -(x^2 -2hx) - \mu ^2}{2\sigma^2} \\
@@ -60,24 +69,27 @@ tx {-\frac{(x-\mu)^2}{2\sigma^2}} &=& \frac{ -x^2 + 2\mu x - \mu ^2 + 2t\sigma^2
 &=& \frac{ -(x-h)^2 } {2\sigma^2}+ \mu t  + \frac{t^2 \sigma^2}{2}  (約分) \\
 &=& -\frac{ (x-h)2 } {2\sigma^2}+ \mu t  + \frac{t^2 \sigma^2}{2}  (約分) \\
 \end{eqnarray*} %]]></script>
-と指数部を変形することができた。
+
+<p>と指数部を変形することができた。
 よって、最初の式に戻ると</p>
 
-<p><script type="math/tex">% <![CDATA[
+<script type="math/tex; mode=display">% <![CDATA[
 \begin{eqnarray*}
 E[e^tX] &=& \int_{-\infty}^{\infty} \frac{1} {\sqrt{2\pi}\sigma}e^{ -\frac{ (x-h)^2 } {2\sigma^2} + \mu t + \frac{t^2 \sigma^2}{2}  }dx \\
  &=& e^{ \mu t + \frac{t^2 \sigma^2}{2}  } \int_{-\infty}^{\infty} \frac{1} {\sqrt{2\pi}\sigma}e^{ -\frac{ (x-h)^2 } {2\sigma^2}   }dx
 \end{eqnarray*} %]]></script>
-ここで、積分の中を見ると平均$h = \mu + t\sigma ^2$、分散$\sigma^2$な正規分布$\mathcal{N}(h, \sigma^2)$となっていることが分かる。</p>
+
+<p>ここで、積分の中を見ると平均$h = \mu + t\sigma ^2$、分散$\sigma^2$な正規分布$\mathcal{N}(h, \sigma^2)$となっていることが分かる。</p>
 
 <p>正規分布は確率分布であり、全範囲で積分すれば$1$である
 （∵全事象の起きる確率は1である）ため、結局、正規分布においては</p>
 
-<p><script type="math/tex">% <![CDATA[
+<script type="math/tex; mode=display">% <![CDATA[
 \begin{eqnarray*}
 Mt(x) = E[e^tX] &=& e^{ \mu t + \frac{t^2 \sigma^2}{2}  } 
 \end{eqnarray*} %]]></script>
-が成立することが分かる。</p>
+
+<p>が成立することが分かる。</p>
 
   </body>
 </html>
