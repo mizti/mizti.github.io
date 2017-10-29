@@ -219,6 +219,7 @@ DEPENDENCIES
   github-pages
   jekyll
   jekyll-archives
+  nokogiri
 
 BUNDLED WITH
    1.11.2
